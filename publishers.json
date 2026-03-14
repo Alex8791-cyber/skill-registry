@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "publishers": [
+    {
+      "id": "cognithor-official",
+      "name": "Cognithor Official",
+      "trust_level": "verified",
+      "github": "Alex8791-cyber"
+    }
+  ]
+}
