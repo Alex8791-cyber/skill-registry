@@ -1,0 +1,26 @@
+{
+  "name": "marketplace-monitor",
+  "version": "1.0.0",
+  "description": "Marketplace Monitor",
+  "author_github": "Alex8791-cyber",
+  "category": "productivity",
+  "tools_required": [
+    "web_search",
+    "search_and_read",
+    "deep_research",
+    "set_reminder",
+    "save_to_memory"
+  ],
+  "trigger_keywords": [
+    "marketplace",
+    "marktplatz",
+    "deal",
+    "angebot",
+    "preis überwachen",
+    "price monitor",
+    "günstig",
+    "cheap"
+  ],
+  "priority": 5,
+  "content_hash": "fdc151280c86e7abfaf3f3287ab19cd839015cdf3c1af01e93a3c4a087643f81"
+}
