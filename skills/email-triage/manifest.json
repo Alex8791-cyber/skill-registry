@@ -1,0 +1,22 @@
+{
+  "name": "email-triage",
+  "version": "1.0.0",
+  "description": "Email Triage",
+  "author_github": "Alex8791-cyber",
+  "category": "productivity",
+  "tools_required": [
+    "read_file",
+    "write_file"
+  ],
+  "trigger_keywords": [
+    "Email",
+    "E-Mail",
+    "Postfach",
+    "sortieren",
+    "triage",
+    "Eingang",
+    "Inbox"
+  ],
+  "priority": 5,
+  "content_hash": "66d2b1d3a9115d1cd631281bd1d2f9205c7cc42e5bd1f8bfdc96bf40ea287358"
+}
