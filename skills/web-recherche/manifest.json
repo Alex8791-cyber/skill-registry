@@ -1,0 +1,21 @@
+{
+  "name": "web-recherche",
+  "version": "1.0.0",
+  "description": "Web Recherche",
+  "author_github": "Alex8791-cyber",
+  "category": "research",
+  "tools_required": [
+    "web_search",
+    "write_file"
+  ],
+  "trigger_keywords": [
+    "Recherche",
+    "recherchieren",
+    "Zusammenfassung",
+    "Internet",
+    "Web-Suche",
+    "Suche"
+  ],
+  "priority": 5,
+  "content_hash": "69676030cbbc7622157b4a0fbc4a7511dc91f8b55d616b068a9215ed1e5fb212"
+}
