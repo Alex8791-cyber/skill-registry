@@ -1,0 +1,23 @@
+{
+  "name": "morgen-briefing",
+  "version": "1.0.0",
+  "description": "Morgen Briefing",
+  "author_github": "Alex8791-cyber",
+  "category": "productivity",
+  "tools_required": [
+    "get_recent_episodes",
+    "search_memory",
+    "list_directory",
+    "search_procedures"
+  ],
+  "trigger_keywords": [
+    "Briefing",
+    "Morgen",
+    "Tagesplan",
+    "Überblick",
+    "Zusammenfassung",
+    "was steht an"
+  ],
+  "priority": 4,
+  "content_hash": "ea30cbcd0225517e24270e2cfa1cd9c3f870a9e9111563304dc424b18129839c"
+}
