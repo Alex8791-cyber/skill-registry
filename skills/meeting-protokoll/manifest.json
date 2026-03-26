@@ -1,0 +1,29 @@
+{
+  "name": "meeting-protokoll",
+  "version": "1.0.0",
+  "description": "Meeting Protokoll",
+  "author_github": "Alex8791-cyber",
+  "category": "productivity",
+  "tools_required": [
+    "media_transcribe_audio",
+    "media_extract_text",
+    "write_file",
+    "search_memory",
+    "email_send",
+    "vault_save"
+  ],
+  "trigger_keywords": [
+    "Protokoll",
+    "Mitschrift",
+    "Meeting Notes",
+    "Besprechungsnotizen",
+    "Transkript",
+    "Action Items",
+    "Entscheidungen",
+    "Nachbereitung",
+    "Follow-Up",
+    "was wurde besprochen"
+  ],
+  "priority": 6,
+  "content_hash": "27240b88c9b1733bd61af7c833ac8a2ac907ebd38d1982c9f9156197b2da367f"
+}
