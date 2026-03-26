@@ -1,0 +1,27 @@
+{
+  "name": "dokument-analyse",
+  "version": "1.0.0",
+  "description": "Dokument Analyse",
+  "author_github": "Alex8791-cyber",
+  "category": "analysis",
+  "tools_required": [
+    "media_extract_text",
+    "analyze_document",
+    "vault_save"
+  ],
+  "trigger_keywords": [
+    "Dokument",
+    "analysieren",
+    "PDF",
+    "Vertrag",
+    "Angebot",
+    "zusammenfassen",
+    "DOCX",
+    "Analyse",
+    "auswerten",
+    "Bericht",
+    "Protokoll"
+  ],
+  "priority": 5,
+  "content_hash": "bcf19ea68f1c55928c4b98c813a8f0d6fe3fceb5e2225f4a11debc53b83f9739"
+}
