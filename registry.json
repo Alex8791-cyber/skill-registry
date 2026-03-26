@@ -1,6 +1,237 @@
 {
-  "version": "1.0.0",
-  "updated_at": "2026-03-14T21:00:00Z",
-  "skills": [],
+  "version": "1.1.0",
+  "updated_at": "2026-03-26T21:37:22Z",
+  "skills": [
+    {
+      "name": "code-review",
+      "version": "1.0.0",
+      "description": "Code Review",
+      "author_github": "Alex8791-cyber",
+      "category": "development",
+      "tools_required": [
+        "git_diff",
+        "git_log",
+        "read_file",
+        "analyze_code",
+        "run_python",
+        "find_in_files",
+        "write_file"
+      ],
+      "content_hash": "215c528c6ee08cfd3287b1eba2d40b9e9fb6f5d7e3877586dc8df592e8bc9e41",
+      "recalled": false
+    },
+    {
+      "name": "dokument-analyse",
+      "version": "1.0.0",
+      "description": "Dokument Analyse",
+      "author_github": "Alex8791-cyber",
+      "category": "analysis",
+      "tools_required": [
+        "media_extract_text",
+        "analyze_document",
+        "vault_save"
+      ],
+      "content_hash": "bcf19ea68f1c55928c4b98c813a8f0d6fe3fceb5e2225f4a11debc53b83f9739",
+      "recalled": false
+    },
+    {
+      "name": "email-triage",
+      "version": "1.0.0",
+      "description": "Email Triage",
+      "author_github": "Alex8791-cyber",
+      "category": "productivity",
+      "tools_required": [
+        "read_file",
+        "write_file"
+      ],
+      "content_hash": "66d2b1d3a9115d1cd631281bd1d2f9205c7cc42e5bd1f8bfdc96bf40ea287358",
+      "recalled": false
+    },
+    {
+      "name": "kontakt-recherche",
+      "version": "1.0.0",
+      "description": "Kontakt Recherche",
+      "author_github": "Alex8791-cyber",
+      "category": "research",
+      "tools_required": [
+        "search_memory",
+        "web_search",
+        "add_entity",
+        "save_to_memory",
+        "write_file"
+      ],
+      "content_hash": "b7bd072502ba83b9fb92cb4e62697b469b500e3d4faefe8787c8597f422b95cb",
+      "recalled": false
+    },
+    {
+      "name": "marketplace-monitor",
+      "version": "1.0.0",
+      "description": "Marketplace Monitor",
+      "author_github": "Alex8791-cyber",
+      "category": "productivity",
+      "tools_required": [
+        "web_search",
+        "search_and_read",
+        "deep_research",
+        "set_reminder",
+        "save_to_memory"
+      ],
+      "content_hash": "fdc151280c86e7abfaf3f3287ab19cd839015cdf3c1af01e93a3c4a087643f81",
+      "recalled": false
+    },
+    {
+      "name": "meeting-protokoll",
+      "version": "1.0.0",
+      "description": "Meeting Protokoll",
+      "author_github": "Alex8791-cyber",
+      "category": "productivity",
+      "tools_required": [
+        "media_transcribe_audio",
+        "media_extract_text",
+        "write_file",
+        "search_memory",
+        "email_send",
+        "vault_save"
+      ],
+      "content_hash": "27240b88c9b1733bd61af7c833ac8a2ac907ebd38d1982c9f9156197b2da367f",
+      "recalled": false
+    },
+    {
+      "name": "meeting-vorbereitung",
+      "version": "1.0.0",
+      "description": "Meeting Vorbereitung",
+      "author_github": "Alex8791-cyber",
+      "category": "productivity",
+      "tools_required": [
+        "search_memory",
+        "web_search",
+        "write_file"
+      ],
+      "content_hash": "74931e7502740efda78ae2296a88ee75e1e63677f95bdc00e1b4160a51e7f864",
+      "recalled": false
+    },
+    {
+      "name": "morgen-briefing",
+      "version": "1.0.0",
+      "description": "Morgen Briefing",
+      "author_github": "Alex8791-cyber",
+      "category": "productivity",
+      "tools_required": [
+        "get_recent_episodes",
+        "search_memory",
+        "list_directory",
+        "search_procedures"
+      ],
+      "content_hash": "ea30cbcd0225517e24270e2cfa1cd9c3f870a9e9111563304dc424b18129839c",
+      "recalled": false
+    },
+    {
+      "name": "projekt-setup",
+      "version": "1.0.0",
+      "description": "Projekt Setup",
+      "author_github": "Alex8791-cyber",
+      "category": "development",
+      "tools_required": [
+        "write_file",
+        "list_directory",
+        "save_to_memory"
+      ],
+      "content_hash": "d6dca50fb16b60b2e54ce906da366fa9a5e96c52084ce97d64b596082062bdca",
+      "recalled": false
+    },
+    {
+      "name": "tages-report",
+      "version": "1.0.0",
+      "description": "Tages Report",
+      "author_github": "Alex8791-cyber",
+      "category": "productivity",
+      "tools_required": [
+        "search_memory",
+        "get_recent_episodes",
+        "get_core_memory",
+        "calendar_upcoming",
+        "list_directory",
+        "create_chart",
+        "write_file"
+      ],
+      "content_hash": "9423f587c869c8d9f8dfa585386b0fa31e5b00d6388a949798d7db40bde9ff53",
+      "recalled": false
+    },
+    {
+      "name": "todo-management",
+      "version": "1.0.0",
+      "description": "Todo Management",
+      "author_github": "Alex8791-cyber",
+      "category": "productivity",
+      "tools_required": [
+        "search_memory",
+        "write_file"
+      ],
+      "content_hash": "920ac497d0040fd4d685e2e334a45e145e0953e8cbe937b8746844c8d460d0c7",
+      "recalled": false
+    },
+    {
+      "name": "vertrag-pruefer",
+      "version": "1.0.0",
+      "description": "Vertrag Pruefer",
+      "author_github": "Alex8791-cyber",
+      "category": "legal",
+      "tools_required": [
+        "media_extract_text",
+        "analyze_document",
+        "search_memory",
+        "vault_save",
+        "web_search"
+      ],
+      "content_hash": "183232eada3bf495fe5804535be833839ce3e90fd90680ba9beb5c9393de3745",
+      "recalled": false
+    },
+    {
+      "name": "web-recherche",
+      "version": "1.0.0",
+      "description": "Web Recherche",
+      "author_github": "Alex8791-cyber",
+      "category": "research",
+      "tools_required": [
+        "web_search",
+        "write_file"
+      ],
+      "content_hash": "69676030cbbc7622157b4a0fbc4a7511dc91f8b55d616b068a9215ed1e5fb212",
+      "recalled": false
+    },
+    {
+      "name": "wissens-synthese",
+      "version": "1.0.0",
+      "description": "Wissens Synthese",
+      "author_github": "Alex8791-cyber",
+      "category": "analysis",
+      "tools_required": [
+        "knowledge_synthesize",
+        "knowledge_contradictions",
+        "knowledge_timeline",
+        "knowledge_gaps",
+        "vault_save"
+      ],
+      "content_hash": "167fefbfa055bbf6371e5d4655ddfa69bf020540a7d9b3f93b78a02e7c577c7d",
+      "recalled": false
+    },
+    {
+      "name": "workflow-recorder",
+      "version": "1.0.0",
+      "description": "Workflow Recorder",
+      "author_github": "Alex8791-cyber",
+      "category": "automation",
+      "tools_required": [
+        "write_file",
+        "create_skill",
+        "search_memory",
+        "save_to_memory",
+        "list_skills",
+        "read_file"
+      ],
+      "content_hash": "38407796e3f5ed875b282e445c2435b1c5b971c81ac96499b62011790d3d7181",
+      "recalled": false
+    }
+  ],
   "recalls": []
 }
