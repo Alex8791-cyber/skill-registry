@@ -1,0 +1,23 @@
+{
+  "name": "meeting-vorbereitung",
+  "version": "1.0.0",
+  "description": "Meeting Vorbereitung",
+  "author_github": "Alex8791-cyber",
+  "category": "productivity",
+  "tools_required": [
+    "search_memory",
+    "web_search",
+    "write_file"
+  ],
+  "trigger_keywords": [
+    "Meeting",
+    "Besprechung",
+    "Termin",
+    "vorbereiten",
+    "Agenda",
+    "Teilnehmer",
+    "Gesprächsvorbereitung"
+  ],
+  "priority": 5,
+  "content_hash": "74931e7502740efda78ae2296a88ee75e1e63677f95bdc00e1b4160a51e7f864"
+}
