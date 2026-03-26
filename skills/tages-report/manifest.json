@@ -1,0 +1,30 @@
+{
+  "name": "tages-report",
+  "version": "1.0.0",
+  "description": "Tages Report",
+  "author_github": "Alex8791-cyber",
+  "category": "productivity",
+  "tools_required": [
+    "search_memory",
+    "get_recent_episodes",
+    "get_core_memory",
+    "calendar_upcoming",
+    "list_directory",
+    "create_chart",
+    "write_file"
+  ],
+  "trigger_keywords": [
+    "Tagesreport",
+    "Tagesbericht",
+    "Zusammenfassung heute",
+    "was habe ich gemacht",
+    "Tagesrueckblick",
+    "Daily Report",
+    "EOD",
+    "End of Day",
+    "Abend-Briefing",
+    "was wurde erledigt"
+  ],
+  "priority": 6,
+  "content_hash": "9423f587c869c8d9f8dfa585386b0fa31e5b00d6388a949798d7db40bde9ff53"
+}
