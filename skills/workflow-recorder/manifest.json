@@ -1,0 +1,31 @@
+{
+  "name": "workflow-recorder",
+  "version": "1.0.0",
+  "description": "Workflow Recorder",
+  "author_github": "Alex8791-cyber",
+  "category": "automation",
+  "tools_required": [
+    "write_file",
+    "create_skill",
+    "search_memory",
+    "save_to_memory",
+    "list_skills",
+    "read_file"
+  ],
+  "trigger_keywords": [
+    "Workflow",
+    "Automatisierung",
+    "automatisieren",
+    "Ablauf aufnehmen",
+    "Prozess erstellen",
+    "immer wenn",
+    "jedes Mal wenn",
+    "wiederholbar",
+    "Routine",
+    "Vorlage erstellen",
+    "Skill erstellen",
+    "neuer Skill"
+  ],
+  "priority": 7,
+  "content_hash": "38407796e3f5ed875b282e445c2435b1c5b971c81ac96499b62011790d3d7181"
+}
