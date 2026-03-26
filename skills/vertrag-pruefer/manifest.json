@@ -1,0 +1,33 @@
+{
+  "name": "vertrag-pruefer",
+  "version": "1.0.0",
+  "description": "Vertrag Pruefer",
+  "author_github": "Alex8791-cyber",
+  "category": "legal",
+  "tools_required": [
+    "media_extract_text",
+    "analyze_document",
+    "search_memory",
+    "vault_save",
+    "web_search"
+  ],
+  "trigger_keywords": [
+    "Vertrag",
+    "pruefen",
+    "Vertragspruefung",
+    "AGB",
+    "Klausel",
+    "Risiko",
+    "juristisch",
+    "Kuendigungsfrist",
+    "Haftung",
+    "Vertragsanalyse",
+    "NDA",
+    "SLA",
+    "Dienstleistungsvertrag",
+    "Mietvertrag",
+    "Arbeitsvertrag"
+  ],
+  "priority": 6,
+  "content_hash": "183232eada3bf495fe5804535be833839ce3e90fd90680ba9beb5c9393de3745"
+}
