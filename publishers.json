@@ -1,11 +1,12 @@
 {
-  "version": "1.0.0",
   "publishers": [
     {
-      "id": "cognithor-official",
-      "name": "Cognithor Official",
+      "github_username": "Alex8791-cyber",
+      "display_name": "Cognithor Builtin",
+      "verified": true,
       "trust_level": "verified",
-      "github": "Alex8791-cyber"
+      "skills_published": 15,
+      "reputation_score": 100.0
     }
   ]
 }
