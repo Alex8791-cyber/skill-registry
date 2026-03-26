@@ -1,0 +1,23 @@
+{
+  "name": "projekt-setup",
+  "version": "1.0.0",
+  "description": "Projekt Setup",
+  "author_github": "Alex8791-cyber",
+  "category": "development",
+  "tools_required": [
+    "write_file",
+    "list_directory",
+    "save_to_memory"
+  ],
+  "trigger_keywords": [
+    "Projekt",
+    "Setup",
+    "neues Projekt",
+    "anlegen",
+    "Projektstruktur",
+    "Ordner",
+    "initialisieren"
+  ],
+  "priority": 5,
+  "content_hash": "d6dca50fb16b60b2e54ce906da366fa9a5e96c52084ce97d64b596082062bdca"
+}
