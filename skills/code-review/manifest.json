@@ -1,0 +1,30 @@
+{
+  "name": "code-review",
+  "version": "1.0.0",
+  "description": "Code Review",
+  "author_github": "Alex8791-cyber",
+  "category": "development",
+  "tools_required": [
+    "git_diff",
+    "git_log",
+    "read_file",
+    "analyze_code",
+    "run_python",
+    "find_in_files",
+    "write_file"
+  ],
+  "trigger_keywords": [
+    "Code Review",
+    "Review",
+    "Pull Request",
+    "PR",
+    "Diff",
+    "Code pruefen",
+    "Bugs finden",
+    "Security Check",
+    "Code-Qualitaet",
+    "Refactoring-Vorschlag"
+  ],
+  "priority": 6,
+  "content_hash": "215c528c6ee08cfd3287b1eba2d40b9e9fb6f5d7e3877586dc8df592e8bc9e41"
+}
