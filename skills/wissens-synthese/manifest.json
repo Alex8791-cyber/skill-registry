@@ -1,0 +1,28 @@
+{
+  "name": "wissens-synthese",
+  "version": "1.0.0",
+  "description": "Wissens Synthese",
+  "author_github": "Alex8791-cyber",
+  "category": "analysis",
+  "tools_required": [
+    "knowledge_synthesize",
+    "knowledge_contradictions",
+    "knowledge_timeline",
+    "knowledge_gaps",
+    "vault_save"
+  ],
+  "trigger_keywords": [
+    "Synthese",
+    "zusammenführen",
+    "Überblick",
+    "Gesamtbild",
+    "was wissen wir",
+    "Wissensstand",
+    "Widersprüche",
+    "Zeitlinie",
+    "Wissenslücken",
+    "Faktencheck"
+  ],
+  "priority": 6,
+  "content_hash": "167fefbfa055bbf6371e5d4655ddfa69bf020540a7d9b3f93b78a02e7c577c7d"
+}
