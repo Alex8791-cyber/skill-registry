@@ -1,0 +1,25 @@
+{
+  "name": "kontakt-recherche",
+  "version": "1.0.0",
+  "description": "Kontakt Recherche",
+  "author_github": "Alex8791-cyber",
+  "category": "research",
+  "tools_required": [
+    "search_memory",
+    "web_search",
+    "add_entity",
+    "save_to_memory",
+    "write_file"
+  ],
+  "trigger_keywords": [
+    "Kontakt",
+    "Recherche",
+    "Person",
+    "Firma",
+    "Hintergrund",
+    "Gesprächspartner",
+    "nachschlagen"
+  ],
+  "priority": 5,
+  "content_hash": "b7bd072502ba83b9fb92cb4e62697b469b500e3d4faefe8787c8597f422b95cb"
+}
