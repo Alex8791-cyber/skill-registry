@@ -1,0 +1,12 @@
+{
+  "name": "math-renderer",
+  "version": "1.0.0",
+  "description": "Renders mathematical formulas and equations to PDF via Typst",
+  "author_github": "Alex8791-cyber",
+  "license": "Apache-2.0",
+  "category": "productivity",
+  "trigger_keywords": ["formel", "gleichung", "mathe", "integral", "matrix", "equation"],
+  "tools_required": ["typst_render"],
+  "max_tool_calls": 3,
+  "min_jarvis_version": "0.68.0"
+}

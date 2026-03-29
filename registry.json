@@ -1,237 +1,196 @@
 {
-  "version": "1.1.0",
-  "updated_at": "2026-03-26T21:37:22Z",
   "skills": [
+    {
+      "name": "arc-agi3-benchmark",
+      "version": "1.0.0",
+      "description": "ARC-AGI-3 Interactive Reasoning Benchmark Agent",
+      "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
+      "category": "research",
+      "content_hash": "762bcb96bc5eec365befc8b065e107325776c00853e2510a1d847b24c9fff434",
+      "min_jarvis_version": "0.67.0"
+    },
     {
       "name": "code-review",
       "version": "1.0.0",
       "description": "Code Review",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "development",
-      "tools_required": [
-        "git_diff",
-        "git_log",
-        "read_file",
-        "analyze_code",
-        "run_python",
-        "find_in_files",
-        "write_file"
-      ],
-      "content_hash": "215c528c6ee08cfd3287b1eba2d40b9e9fb6f5d7e3877586dc8df592e8bc9e41",
-      "recalled": false
+      "content_hash": "c288cb5c1129d47604921d95fa56021128087ac748a3ea84bb0fb8f013e7219f",
+      "min_jarvis_version": "0.60.0"
     },
     {
       "name": "dokument-analyse",
       "version": "1.0.0",
       "description": "Dokument Analyse",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "analysis",
-      "tools_required": [
-        "media_extract_text",
-        "analyze_document",
-        "vault_save"
-      ],
-      "content_hash": "bcf19ea68f1c55928c4b98c813a8f0d6fe3fceb5e2225f4a11debc53b83f9739",
-      "recalled": false
+      "content_hash": "2e005793a279028dbd4398cf9543816778de0779385bb062d9b19c3411ebfe33",
+      "min_jarvis_version": "0.60.0"
     },
     {
       "name": "email-triage",
       "version": "1.0.0",
       "description": "Email Triage",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "productivity",
-      "tools_required": [
-        "read_file",
-        "write_file"
-      ],
-      "content_hash": "66d2b1d3a9115d1cd631281bd1d2f9205c7cc42e5bd1f8bfdc96bf40ea287358",
-      "recalled": false
+      "content_hash": "77f5dbc2361580dfc22b58089d51fac67a8427b48c3d97946110a759dd7b1e15",
+      "min_jarvis_version": "0.60.0"
     },
     {
       "name": "kontakt-recherche",
       "version": "1.0.0",
       "description": "Kontakt Recherche",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "research",
-      "tools_required": [
-        "search_memory",
-        "web_search",
-        "add_entity",
-        "save_to_memory",
-        "write_file"
-      ],
-      "content_hash": "b7bd072502ba83b9fb92cb4e62697b469b500e3d4faefe8787c8597f422b95cb",
-      "recalled": false
+      "content_hash": "44f618139056ce181db1980ad51bd599f0db3576a57d0bf1fda99b1bd61373e2",
+      "min_jarvis_version": "0.60.0"
+    },
+    {
+      "name": "markdown-to-pdf",
+      "version": "1.0.0",
+      "description": "Convert Markdown text to high-quality PDF via Typst",
+      "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
+      "category": "productivity",
+      "content_hash": "c183de29808ca2a5cdd636486b1ca1386ed0b05b9fb61e4728f98f28395db886",
+      "min_jarvis_version": "0.68.0"
     },
     {
       "name": "marketplace-monitor",
       "version": "1.0.0",
       "description": "Marketplace Monitor",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "productivity",
-      "tools_required": [
-        "web_search",
-        "search_and_read",
-        "deep_research",
-        "set_reminder",
-        "save_to_memory"
-      ],
-      "content_hash": "fdc151280c86e7abfaf3f3287ab19cd839015cdf3c1af01e93a3c4a087643f81",
-      "recalled": false
+      "content_hash": "b009cff6a0663c85d19bd565f7fc81c621ae929cbfe0f70b63697b130048ee86",
+      "min_jarvis_version": "0.60.0"
+    },
+    {
+      "name": "math-renderer",
+      "version": "1.0.0",
+      "description": "Renders mathematical formulas and equations to PDF via Typst",
+      "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
+      "category": "productivity",
+      "content_hash": "af09e2e6984572ce1602f0130c47268bb36ae4f30f284497fe623cd36e48d13e",
+      "min_jarvis_version": "0.68.0"
     },
     {
       "name": "meeting-protokoll",
       "version": "1.0.0",
       "description": "Meeting Protokoll",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "productivity",
-      "tools_required": [
-        "media_transcribe_audio",
-        "media_extract_text",
-        "write_file",
-        "search_memory",
-        "email_send",
-        "vault_save"
-      ],
-      "content_hash": "27240b88c9b1733bd61af7c833ac8a2ac907ebd38d1982c9f9156197b2da367f",
-      "recalled": false
+      "content_hash": "c9fad9494973c1b72959dc4b2b3d01fcc8d8eacc520265c1f2090fccb2d87a85",
+      "min_jarvis_version": "0.60.0"
     },
     {
       "name": "meeting-vorbereitung",
       "version": "1.0.0",
       "description": "Meeting Vorbereitung",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "productivity",
-      "tools_required": [
-        "search_memory",
-        "web_search",
-        "write_file"
-      ],
-      "content_hash": "74931e7502740efda78ae2296a88ee75e1e63677f95bdc00e1b4160a51e7f864",
-      "recalled": false
+      "content_hash": "20c65e8eb82b7d599611f0c507cccc4063a10bb20cc3a938a99a8085e742559c",
+      "min_jarvis_version": "0.60.0"
     },
     {
       "name": "morgen-briefing",
       "version": "1.0.0",
       "description": "Morgen Briefing",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "productivity",
-      "tools_required": [
-        "get_recent_episodes",
-        "search_memory",
-        "list_directory",
-        "search_procedures"
-      ],
-      "content_hash": "ea30cbcd0225517e24270e2cfa1cd9c3f870a9e9111563304dc424b18129839c",
-      "recalled": false
+      "content_hash": "8919802f29caa746364167395e2ce969f5da7adc5d85d5be853f42a334b6507c",
+      "min_jarvis_version": "0.60.0"
     },
     {
       "name": "projekt-setup",
       "version": "1.0.0",
       "description": "Projekt Setup",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "development",
-      "tools_required": [
-        "write_file",
-        "list_directory",
-        "save_to_memory"
-      ],
-      "content_hash": "d6dca50fb16b60b2e54ce906da366fa9a5e96c52084ce97d64b596082062bdca",
-      "recalled": false
+      "content_hash": "e3d1ce08c1e912c733af0c7d3919be52e75a1f96f559e44425a1fc0221575c20",
+      "min_jarvis_version": "0.60.0"
     },
     {
       "name": "tages-report",
       "version": "1.0.0",
       "description": "Tages Report",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "productivity",
-      "tools_required": [
-        "search_memory",
-        "get_recent_episodes",
-        "get_core_memory",
-        "calendar_upcoming",
-        "list_directory",
-        "create_chart",
-        "write_file"
-      ],
-      "content_hash": "9423f587c869c8d9f8dfa585386b0fa31e5b00d6388a949798d7db40bde9ff53",
-      "recalled": false
+      "content_hash": "6c28b6a2aa0fe301574a4bbca25ca7070fa405fb27edbb0efd19722b35fff811",
+      "min_jarvis_version": "0.60.0"
     },
     {
       "name": "todo-management",
       "version": "1.0.0",
       "description": "Todo Management",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "productivity",
-      "tools_required": [
-        "search_memory",
-        "write_file"
-      ],
-      "content_hash": "920ac497d0040fd4d685e2e334a45e145e0953e8cbe937b8746844c8d460d0c7",
-      "recalled": false
+      "content_hash": "70cc30d1b16bf27065b944fcafe5c6c9c612449559e8522341287b0d62adfad4",
+      "min_jarvis_version": "0.60.0"
+    },
+    {
+      "name": "typst-documents",
+      "version": "1.0.0",
+      "description": "High-quality PDF document generation with Typst templates",
+      "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
+      "category": "productivity",
+      "content_hash": "138b4bfcd9cd1dae06c415e21528aafc03f22a0be00fac0ffa48fdce8161563e",
+      "min_jarvis_version": "0.68.0"
     },
     {
       "name": "vertrag-pruefer",
       "version": "1.0.0",
       "description": "Vertrag Pruefer",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "legal",
-      "tools_required": [
-        "media_extract_text",
-        "analyze_document",
-        "search_memory",
-        "vault_save",
-        "web_search"
-      ],
-      "content_hash": "183232eada3bf495fe5804535be833839ce3e90fd90680ba9beb5c9393de3745",
-      "recalled": false
+      "content_hash": "117c4c917da71b65e97f51c7e7c5fb62ca6c6c918f25c884b684e948e4434cad",
+      "min_jarvis_version": "0.60.0"
     },
     {
       "name": "web-recherche",
       "version": "1.0.0",
       "description": "Web Recherche",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "research",
-      "tools_required": [
-        "web_search",
-        "write_file"
-      ],
-      "content_hash": "69676030cbbc7622157b4a0fbc4a7511dc91f8b55d616b068a9215ed1e5fb212",
-      "recalled": false
+      "content_hash": "095e2622c80170128c7e102c8968c2edff0d9e414fa75e15a203c1d4d2266a95",
+      "min_jarvis_version": "0.60.0"
     },
     {
       "name": "wissens-synthese",
       "version": "1.0.0",
       "description": "Wissens Synthese",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "analysis",
-      "tools_required": [
-        "knowledge_synthesize",
-        "knowledge_contradictions",
-        "knowledge_timeline",
-        "knowledge_gaps",
-        "vault_save"
-      ],
-      "content_hash": "167fefbfa055bbf6371e5d4655ddfa69bf020540a7d9b3f93b78a02e7c577c7d",
-      "recalled": false
+      "content_hash": "a4e18bc35af83805eb535fb33163a3be6cf646cae5eac045429fa17d333384a3",
+      "min_jarvis_version": "0.60.0"
     },
     {
       "name": "workflow-recorder",
       "version": "1.0.0",
       "description": "Workflow Recorder",
       "author_github": "Alex8791-cyber",
+      "license": "Apache-2.0",
       "category": "automation",
-      "tools_required": [
-        "write_file",
-        "create_skill",
-        "search_memory",
-        "save_to_memory",
-        "list_skills",
-        "read_file"
-      ],
-      "content_hash": "38407796e3f5ed875b282e445c2435b1c5b971c81ac96499b62011790d3d7181",
-      "recalled": false
+      "content_hash": "728b53f8dcde9ba50d0942c3f542802aadb92064a2c3e0d27e56e5331f867c9f",
+      "min_jarvis_version": "0.60.0"
     }
   ],
-  "recalls": []
+  "version": "2.0.0",
+  "total": 19
 }

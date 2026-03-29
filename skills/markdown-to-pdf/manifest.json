@@ -1,0 +1,12 @@
+{
+  "name": "markdown-to-pdf",
+  "version": "1.0.0",
+  "description": "Convert Markdown text to high-quality PDF via Typst",
+  "author_github": "Alex8791-cyber",
+  "license": "Apache-2.0",
+  "category": "productivity",
+  "trigger_keywords": ["markdown", "md", "konvertieren", "convert", "pdf"],
+  "tools_required": ["typst_render"],
+  "max_tool_calls": 3,
+  "min_jarvis_version": "0.68.0"
+}

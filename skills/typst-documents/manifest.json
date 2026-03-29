@@ -1,0 +1,12 @@
+{
+  "name": "typst-documents",
+  "version": "1.0.0",
+  "description": "High-quality PDF document generation with Typst templates",
+  "author_github": "Alex8791-cyber",
+  "license": "Apache-2.0",
+  "category": "productivity",
+  "trigger_keywords": ["typst", "pdf", "bericht", "rechnung", "brief", "template", "vorlage"],
+  "tools_required": ["typst_render", "template_list", "template_render"],
+  "max_tool_calls": 5,
+  "min_jarvis_version": "0.68.0"
+}

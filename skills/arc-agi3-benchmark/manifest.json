@@ -1,0 +1,12 @@
+{
+  "name": "arc-agi3-benchmark",
+  "version": "1.0.0",
+  "description": "ARC-AGI-3 Interactive Reasoning Benchmark Agent",
+  "author_github": "Alex8791-cyber",
+  "license": "Apache-2.0",
+  "category": "research",
+  "trigger_keywords": ["arc", "arc-agi", "benchmark", "puzzle", "reasoning"],
+  "tools_required": ["arc_play", "arc_status", "arc_replay"],
+  "max_tool_calls": 10,
+  "min_jarvis_version": "0.67.0"
+}
