@@ -6,11 +6,9 @@ Bewertet jeden Post 0–100 (Intent Score), verhindert Duplikate via KnowledgeVa
 draftet kontextbewusste Antworten via LLM und pusht Leads an jeden Cognithor-Channel.
 
 Abhängigkeiten:
-    pip install praw>=7.7 pydantic>=2.0 httpx>=0.27
+    pip install pydantic>=2.0 httpx>=0.27
 
-Reddit API-Keys:
-    https://www.reddit.com/prefs/apps → "script" App anlegen
-    → REDDIT_CLIENT_ID, REDDIT_CLIENT_SECRET, REDDIT_USER_AGENT in .env
+Kein Reddit API-Key nötig! Nutzt Reddit's öffentlichen JSON-Feed.
 
 Autor: Cognithor / Alexander Söllner
 Lizenz: Apache 2.0
@@ -28,8 +26,6 @@ from datetime import datetime, timezone
 from typing import Any, Callable
 
 import httpx
-import praw
-import praw.models
 from pydantic import BaseModel, Field, field_validator
 
 logger = logging.getLogger("cognithor.skills.reddit_lead_hunter")
@@ -78,11 +74,9 @@ class LeadHunterConfig(BaseModel):
     llm_api_key: str = Field(default="", description="API-Key (leer für lokale Modelle)")
     llm_timeout_seconds: int = Field(default=60)
 
-    # Reddit API-Credentials (aus Umgebungsvariablen oder direkt)
-    reddit_client_id: str = Field(default_factory=lambda: os.getenv("REDDIT_CLIENT_ID", ""))
-    reddit_client_secret: str = Field(default_factory=lambda: os.getenv("REDDIT_CLIENT_SECRET", ""))
+    # User-Agent für Reddit JSON-Feed (kein API-Key nötig)
     reddit_user_agent: str = Field(
-        default_factory=lambda: os.getenv("REDDIT_USER_AGENT", "cognithor:reddit_lead_hunter:v1.0")
+        default="cognithor:reddit_lead_hunter:v1.0 (by u/cognithor-bot)"
     )
 
     @field_validator("subreddits")
@@ -364,17 +358,17 @@ class IntentScorer:
         self.llm = llm
         self.config = config
 
-    def score(self, post: praw.models.Submission) -> tuple[int, str]:
+    def score(self, post: dict[str, Any]) -> tuple[int, str]:
         """
         Gibt (score: int, reasoning: str) zurück.
         Bei LLM-Fehler: (0, "Scoring fehlgeschlagen").
         """
-        body = (post.selftext or "")[:1000]  # Auf 1000 Zeichen kürzen
+        body = (post.get("selftext") or "")[:1000]
         prompt = SCORE_PROMPT_TEMPLATE.format(
             product_name=self.config.product_name,
             product_description=self.config.product_description,
-            subreddit=post.subreddit.display_name,
-            title=post.title,
+            subreddit=post.get("subreddit", ""),
+            title=post.get("title", ""),
             body=body,
         )
         try:
@@ -389,7 +383,7 @@ class IntentScorer:
             reasoning = str(data.get("reasoning", ""))
             return score, reasoning
         except (json.JSONDecodeError, ValueError, KeyError) as e:
-            logger.warning("Scoring-Fehler für Post %s: %s", post.id, e)
+            logger.warning("Scoring-Fehler für Post %s: %s", post.get("id", "?"), e)
             return 0, "Scoring fehlgeschlagen"
 
 
@@ -400,13 +394,13 @@ class ReplyDrafter:
         self.llm = llm
         self.config = config
 
-    def draft(self, post: praw.models.Submission) -> str:
-        body = (post.selftext or "")[:1000]
+    def draft(self, post: dict[str, Any]) -> str:
+        body = (post.get("selftext") or "")[:1000]
         prompt = REPLY_PROMPT_TEMPLATE.format(
             product_name=self.config.product_name,
             reply_tone=self.config.reply_tone,
-            subreddit=post.subreddit.display_name,
-            title=post.title,
+            subreddit=post.get("subreddit", ""),
+            title=post.get("title", ""),
             body=body,
         )
         try:
@@ -452,19 +446,39 @@ class RedditLeadHunterSkill:
         self._llm = LLMClient(config)
         self._scorer = IntentScorer(self._llm, config)
         self._drafter = ReplyDrafter(self._llm, config)
-        self._reddit = self._init_reddit()
-
-    def _init_reddit(self) -> praw.Reddit:
-        if not self.config.reddit_client_id:
-            raise ValueError(
-                "REDDIT_CLIENT_ID fehlt. Bitte in .env oder config setzen.\n"
-                "App anlegen: https://www.reddit.com/prefs/apps"
-            )
-        return praw.Reddit(
-            client_id=self.config.reddit_client_id,
-            client_secret=self.config.reddit_client_secret,
-            user_agent=self.config.reddit_user_agent,
+        self._http = httpx.Client(
+            timeout=30,
+            headers={"User-Agent": config.reddit_user_agent},
+            follow_redirects=True,
         )
+
+    def _fetch_subreddit_posts(self, subreddit: str, limit: int = 100) -> list[dict[str, Any]]:
+        """Fetch posts from Reddit's public JSON feed (no API key needed)."""
+        url = f"https://www.reddit.com/r/{subreddit}/new.json"
+        params = {"limit": min(limit, 100), "raw_json": 1}
+        try:
+            resp = self._http.get(url, params=params)
+            resp.raise_for_status()
+            data = resp.json()
+            children = data.get("data", {}).get("children", [])
+            posts = []
+            for child in children:
+                p = child.get("data", {})
+                posts.append({
+                    "id": p.get("id", ""),
+                    "title": p.get("title", ""),
+                    "selftext": p.get("selftext", ""),
+                    "subreddit": p.get("subreddit", subreddit),
+                    "permalink": p.get("permalink", ""),
+                    "author": p.get("author", "[deleted]"),
+                    "created_utc": p.get("created_utc", 0),
+                    "score": p.get("score", 0),
+                    "num_comments": p.get("num_comments", 0),
+                })
+            return posts
+        except httpx.HTTPError as e:
+            logger.error("Fehler beim Abrufen von r/%s: %s", subreddit, e)
+            return []
 
     def scan_once(self) -> ScanResult:
         """Führt einen einzelnen Scan-Zyklus durch und gibt das Ergebnis zurück."""
@@ -481,34 +495,34 @@ class RedditLeadHunterSkill:
         )
 
         for sub_name in self.config.subreddits:
-            try:
-                subreddit = self._reddit.subreddit(sub_name)
-                posts = list(subreddit.new(limit=self.config.posts_per_subreddit))
-            except Exception as e:
-                logger.error("Fehler beim Abrufen von r/%s: %s", sub_name, e)
-                continue
+            posts = self._fetch_subreddit_posts(sub_name, self.config.posts_per_subreddit)
+
+            # Rate-limit: 1s pause between subreddits (Reddit public API limit)
+            if posts:
+                time.sleep(1.0)
 
             for post in posts:
                 posts_checked += 1
+                post_id = post.get("id", "")
 
                 # 1. Duplikat-Check
-                if self.seen_store.already_seen(post.id):
+                if self.seen_store.already_seen(post_id):
                     skipped_duplicate += 1
                     continue
 
                 # 2. Schnell-Filter: Posts ohne Text oder mit sehr wenig Inhalt
-                if len(post.title) < 15:
-                    self.seen_store.mark_seen(post.id)
+                if len(post.get("title", "")) < 15:
+                    self.seen_store.mark_seen(post_id)
                     skipped_low_score += 1
                     continue
 
                 # 3. Intent-Scoring
                 score, reasoning = self._scorer.score(post)
-                self.seen_store.mark_seen(post.id)
+                self.seen_store.mark_seen(post_id)
 
                 if score < self.config.min_intent_score:
                     skipped_low_score += 1
-                    logger.debug("Post %s Score=%d (unter Grenze) — übersprungen", post.id, score)
+                    logger.debug("Post %s Score=%d (unter Grenze) — übersprungen", post_id, score)
                     continue
 
                 # 4. Reply-Draft
@@ -516,15 +530,15 @@ class RedditLeadHunterSkill:
 
                 # 5. Lead erstellen
                 lead = RedditLead(
-                    post_id=post.id,
+                    post_id=post_id,
                     subreddit=sub_name,
-                    title=post.title,
-                    body=(post.selftext or "")[:500],
-                    url=f"https://reddit.com{post.permalink}",
-                    author=str(post.author) if post.author else "[deleted]",
-                    created_utc=post.created_utc,
-                    upvotes=post.score,
-                    num_comments=post.num_comments,
+                    title=post.get("title", ""),
+                    body=(post.get("selftext") or "")[:500],
+                    url=f"https://reddit.com{post.get('permalink', '')}",
+                    author=post.get("author", "[deleted]"),
+                    created_utc=post.get("created_utc", 0),
+                    upvotes=post.get("score", 0),
+                    num_comments=post.get("num_comments", 0),
                     intent_score=score,
                     score_reasoning=reasoning,
                     reply_draft=reply_draft,
@@ -533,7 +547,7 @@ class RedditLeadHunterSkill:
 
                 logger.info(
                     "Lead gefunden: r/%s | Score=%d | %s",
-                    sub_name, score, post.title[:60],
+                    sub_name, score, post.get("title", "")[:60],
                 )
 
                 # 6. Notification-Callback (Cognithor-Channel)
@@ -587,6 +601,7 @@ class RedditLeadHunterSkill:
 
     def close(self) -> None:
         self._llm.close()
+        self._http.close()
 
     def __enter__(self) -> "RedditLeadHunterSkill":
         return self

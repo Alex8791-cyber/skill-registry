@@ -1,6 +1,6 @@
 {
   "name": "reddit-lead-hunter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Scans Reddit 24/7 for high-intent posts, scores them 0-100, and drafts context-aware replies via LLM",
   "author_github": "Alex8791-cyber",
   "license": "Apache-2.0",
@@ -25,11 +25,10 @@
     "Community Monitoring"
   ],
   "priority": 7,
+  "min_jarvis_version": "0.82.0",
+  "content_hash": "9b2f4b6c64cf2d46bb0659fb4bdf71ebd7200ebc65861cea98d1688135acc502",
   "dependencies": [
-    "praw>=7.7.1",
     "pydantic>=2.0.0",
     "httpx>=0.27.0"
-  ],
-  "min_jarvis_version": "0.82.0",
-  "content_hash": "ca80da3d9a2c5f8cc55f53ffd00ace0cdc60083865d09eddbb5a5f9bb0095375"
+  ]
 }
