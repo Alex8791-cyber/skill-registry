@@ -1,0 +1,22 @@
+{
+  "product_name": "Cognithor",
+  "product_description": "Open-source Agent Operating System — 16 LLM providers, 123 MCP tools, 5-tier cognitive memory, 11k+ tests, Apache 2.0",
+  "reply_tone": "helpful, technically credible, no sales pitch, reddit-native tone",
+  "subreddits": [
+    "LocalLLaMA",
+    "SaaS",
+    "MachineLearning",
+    "agentframework",
+    "Python",
+    "ArtificialIntelligence",
+    "LangChain"
+  ],
+  "posts_per_subreddit": 100,
+  "min_intent_score": 65,
+  "scan_interval_seconds": 1800,
+  "llm_provider": "ollama",
+  "llm_model": "qwen2.5:27b",
+  "llm_base_url": "http://localhost:11434",
+  "llm_api_key": "",
+  "llm_timeout_seconds": 60
+}

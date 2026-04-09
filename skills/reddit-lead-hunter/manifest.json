@@ -1,0 +1,35 @@
+{
+  "name": "reddit-lead-hunter",
+  "version": "1.0.0",
+  "description": "Scans Reddit 24/7 for high-intent posts, scores them 0-100, and drafts context-aware replies via LLM",
+  "author_github": "Alex8791-cyber",
+  "license": "Apache-2.0",
+  "category": "marketing",
+  "tools_required": [
+    "web_search",
+    "search_and_read",
+    "write_file",
+    "run_python",
+    "send_message"
+  ],
+  "trigger_keywords": [
+    "Reddit",
+    "Lead Hunter",
+    "Reddit Scan",
+    "Social Listening",
+    "Lead Generation",
+    "Reddit Monitoring",
+    "Intent Score",
+    "Kaufintent",
+    "Reddit Leads",
+    "Community Monitoring"
+  ],
+  "priority": 7,
+  "dependencies": [
+    "praw>=7.7.1",
+    "pydantic>=2.0.0",
+    "httpx>=0.27.0"
+  ],
+  "min_jarvis_version": "0.82.0",
+  "content_hash": "ca80da3d9a2c5f8cc55f53ffd00ace0cdc60083865d09eddbb5a5f9bb0095375"
+}
